@@ -3,14 +3,12 @@ package domain;
 public class Order {
     private long id;
     private long memberId;
-    private long[] menuId;
-    private int[] amount;
+    private Set<Menu, Integer> list;
 
-    public Order(long id, long memberId, long[] menuId, int[] amount) {
+    public Order(long id, long memberId, Set<Menu, Integer> list) {
         this.id = id;
         this.memberId = memberId;
-        this.menuId = menuId;
-        this.amount = amount;
+        this.list = list;
     }
 
     public long getId() {
@@ -29,19 +27,11 @@ public class Order {
         this.memberId = memberId;
     }
 
-    public long[] getMenuId() {
-        return menuId;
+    public Set<Menu, Integer> getList() {
+        return list;
     }
 
-    public void setMenuId(long[] menuId) {
-        this.menuId = menuId;
-    }
-
-    public int[] getAmount() {
-        return amount;
-    }
-
-    public void setAmount(int[] amount) {
-        this.amount = amount;
+    public void setList(Set<Menu, Integer> list) {
+        this.list = list;
     }
 }

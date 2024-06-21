@@ -3,9 +3,9 @@ package domain;
 public class Order {
     private long id;
     private long memberId;
-    private Set<Menu, Integer> list;
+    private Map<Menu, Integer> list;
 
-    public Order(long id, long memberId, Set<Menu, Integer> list) {
+    public Order(long id, long memberId, Map<Menu, Integer> list) {
         this.id = id;
         this.memberId = memberId;
         this.list = list;
@@ -27,11 +27,11 @@ public class Order {
         this.memberId = memberId;
     }
 
-    public Set<Menu, Integer> getList() {
+    public Map<Menu, Integer> getList() {
         return list;
     }
 
-    public void setList(Set<Menu, Integer> list) {
+    public void setList(Map<Menu, Integer> list) {
         this.list = list;
     }
 }
